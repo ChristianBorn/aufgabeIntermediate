@@ -93,4 +93,13 @@ class MainTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void printInputStringScanner() {
+        String parameter = "Hallo";
+        String actual = Main.InputScanner(parameter)[0];
+
+        String expected = "Hallo";
+        assertEquals(expected, actual);
+    }
 }

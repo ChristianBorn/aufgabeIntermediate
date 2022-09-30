@@ -1,12 +1,14 @@
 package org.example;
 
-import java.sql.Array;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
         printNumbersBetween1and100Test();
-
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        System.out.println(InputScanner(input)[0]);
     }
 
     public static String[] createArray() {
@@ -40,5 +42,11 @@ public class Main {
         }
 
         return result;
+    }
+
+    public static String[] InputScanner(String input) {
+        String[] savedWords = new String[1];
+        savedWords[0] = input;
+        return savedWords;
     }
 }
