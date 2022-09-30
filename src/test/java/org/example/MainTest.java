@@ -43,4 +43,30 @@ class MainTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void printNumbers0Test() {
+        int testNumber= 0;
+
+        String actual = Main.printNumbersBetween1and100Test()[0];
+        String expected = "1";
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void printNumbers100Test() {
+        String actual = Main.printNumbersBetween1and100Test()[99];
+        String expected = "100";
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void printNumbersDivisibleBy3() {
+        String actual = Main.printNumbersBetween1and100Test()[8];
+        String expected = "#9";
+
+        assertEquals(expected, actual);
+    }
 }
