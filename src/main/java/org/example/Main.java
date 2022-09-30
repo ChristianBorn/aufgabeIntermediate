@@ -1,14 +1,14 @@
 package org.example;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello world!");
-        printNumbersBetween1and100Test();
-        Scanner scanner = new Scanner(System.in);
-        String input = scanner.nextLine();
-        System.out.println(InputScanner(input)[0]);
+//        printNumbersBetween1and100Test();
+        InputScanner();
+
     }
 
     public static String[] createArray() {
@@ -44,9 +44,25 @@ public class Main {
         return result;
     }
 
-    public static String[] InputScanner(String input) {
-        String[] savedWords = new String[1];
-        savedWords[0] = input;
+    public static ArrayList<String> InputScanner() {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<String> savedWords = new ArrayList<>();
+        String input = "";
+
+
+        while (!input.equals("exit")) {
+            System.out.println("Bisherige Wörter: ");
+
+            for (String word : savedWords) {
+                System.out.print(word+", ");
+            }
+
+            System.out.println("\nBitte nächstes Wort eingeben");
+            input = scanner.nextLine();
+            savedWords.add(input);
+        }
+
         return savedWords;
+
     }
 }

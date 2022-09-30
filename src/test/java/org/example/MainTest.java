@@ -96,8 +96,9 @@ class MainTest {
 
     @Test
     public void printInputStringScanner() {
-        String parameter = "Hallo";
-        String actual = Main.InputScanner(parameter)[0];
+        // Todo: Make input Stream testable by JUnit
+
+        String actual = Main.InputScanner().get(0);
 
         String expected = "Hallo";
         assertEquals(expected, actual);
