@@ -57,7 +57,7 @@ class MainTest {
     @Test
     public void printNumbers100Test() {
         String actual = Main.printNumbersBetween1and100Test()[99];
-        String expected = "100";
+        String expected = "$100";
 
         assertEquals(expected, actual);
     }
@@ -66,6 +66,30 @@ class MainTest {
     public void printNumbersDivisibleBy3() {
         String actual = Main.printNumbersBetween1and100Test()[8];
         String expected = "#9";
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void printNumbersDivisibleBy15() {
+        String actual = Main.printNumbersBetween1and100Test()[14];
+        String expected = "?15";
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void printNumbersDivisibleBy5() {
+        String actual = Main.printNumbersBetween1and100Test()[4];
+        String expected = "$5";
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void printNumbersDivisibleBy99() {
+        String actual = Main.printNumbersBetween1and100Test()[98];
+        String expected = "#99";
 
         assertEquals(expected, actual);
     }
